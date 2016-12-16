@@ -12,6 +12,9 @@
 		B768B92E1E03C62F0077662C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B768B92C1E03C62F0077662C /* Main.storyboard */; };
 		B768B9301E03C62F0077662C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B768B92F1E03C62F0077662C /* Assets.xcassets */; };
 		B768B9331E03C62F0077662C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B768B9311E03C62F0077662C /* LaunchScreen.storyboard */; };
+		B768B93D1E03C7520077662C /* PhotoLibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */; };
+		B768B9401E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */; };
+		B768B9411E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B768B92F1E03C62F0077662C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B768B9321E03C62F0077662C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B768B9341E03C62F0077662C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewController.swift; sourceTree = "<group>"; };
+		B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoLibraryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				B768B9281E03C62F0077662C /* AppDelegate.swift */,
 				B768B92A1E03C62F0077662C /* ViewController.swift */,
+				B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */,
+				B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */,
+				B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */,
 				B768B92C1E03C62F0077662C /* Main.storyboard */,
 				B768B92F1E03C62F0077662C /* Assets.xcassets */,
 				B768B9311E03C62F0077662C /* LaunchScreen.storyboard */,
@@ -96,7 +105,6 @@
 				TargetAttributes = {
 					B768B9241E03C62F0077662C = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = YAF72RBM24;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B768B9331E03C62F0077662C /* LaunchScreen.storyboard in Resources */,
+				B768B9411E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib in Resources */,
 				B768B9301E03C62F0077662C /* Assets.xcassets in Resources */,
 				B768B92E1E03C62F0077662C /* Main.storyboard in Resources */,
 			);
@@ -138,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B768B92B1E03C62F0077662C /* ViewController.swift in Sources */,
+				B768B9401E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift in Sources */,
+				B768B93D1E03C7520077662C /* PhotoLibraryCollectionViewController.swift in Sources */,
 				B768B9291E03C62F0077662C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YAF72RBM24;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahenqs.PhotoLibrary;
@@ -274,7 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YAF72RBM24;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahenqs.PhotoLibrary;

@@ -22,13 +22,10 @@ class ViewController: UIViewController {
             photoViewController.photos = photos
         }
         
-//        view.addSubview(photoViewController.collectionView!)
-        
         addChildViewController(photoViewController)
         photoViewController.collectionView?.frame = view.bounds
         view.addSubview(photoViewController.collectionView!)
-        photoViewController.willMove(toParentViewController: self)
-        
+        photoViewController.willMove(toParentViewController: self)        
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,6 +15,9 @@
 		B768B93D1E03C7520077662C /* PhotoLibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */; };
 		B768B9401E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */; };
 		B768B9411E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */; };
+		B768B9441E03D1A50077662C /* PhotoViewerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768B9431E03D1A50077662C /* PhotoViewerCollectionViewController.swift */; };
+		B768B9481E03D2100077662C /* PhotoViewerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768B9461E03D2100077662C /* PhotoViewerCollectionViewCell.swift */; };
+		B768B9491E03D2100077662C /* PhotoViewerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B768B9471E03D2100077662C /* PhotoViewerCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewController.swift; sourceTree = "<group>"; };
 		B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoLibraryCollectionViewCell.xib; sourceTree = "<group>"; };
+		B768B9431E03D1A50077662C /* PhotoViewerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerCollectionViewController.swift; sourceTree = "<group>"; };
+		B768B9461E03D2100077662C /* PhotoViewerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B768B9471E03D2100077662C /* PhotoViewerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +68,34 @@
 			children = (
 				B768B9281E03C62F0077662C /* AppDelegate.swift */,
 				B768B92A1E03C62F0077662C /* ViewController.swift */,
-				B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */,
-				B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */,
-				B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */,
+				B768B9421E03D1460077662C /* Photo Library */,
+				B768B9451E03D1B10077662C /* Photo Viewer */,
 				B768B92C1E03C62F0077662C /* Main.storyboard */,
 				B768B92F1E03C62F0077662C /* Assets.xcassets */,
 				B768B9311E03C62F0077662C /* LaunchScreen.storyboard */,
 				B768B9341E03C62F0077662C /* Info.plist */,
 			);
 			path = PhotoLibrary;
+			sourceTree = "<group>";
+		};
+		B768B9421E03D1460077662C /* Photo Library */ = {
+			isa = PBXGroup;
+			children = (
+				B768B93C1E03C7520077662C /* PhotoLibraryCollectionViewController.swift */,
+				B768B93E1E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift */,
+				B768B93F1E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib */,
+			);
+			name = "Photo Library";
+			sourceTree = "<group>";
+		};
+		B768B9451E03D1B10077662C /* Photo Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				B768B9431E03D1A50077662C /* PhotoViewerCollectionViewController.swift */,
+				B768B9461E03D2100077662C /* PhotoViewerCollectionViewCell.swift */,
+				B768B9471E03D2100077662C /* PhotoViewerCollectionViewCell.xib */,
+			);
+			name = "Photo Viewer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B768B9331E03C62F0077662C /* LaunchScreen.storyboard in Resources */,
+				B768B9491E03D2100077662C /* PhotoViewerCollectionViewCell.xib in Resources */,
 				B768B9411E03C80B0077662C /* PhotoLibraryCollectionViewCell.xib in Resources */,
 				B768B9301E03C62F0077662C /* Assets.xcassets in Resources */,
 				B768B92E1E03C62F0077662C /* Main.storyboard in Resources */,
@@ -147,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B768B92B1E03C62F0077662C /* ViewController.swift in Sources */,
+				B768B9441E03D1A50077662C /* PhotoViewerCollectionViewController.swift in Sources */,
 				B768B9401E03C80B0077662C /* PhotoLibraryCollectionViewCell.swift in Sources */,
+				B768B9481E03D2100077662C /* PhotoViewerCollectionViewCell.swift in Sources */,
 				B768B93D1E03C7520077662C /* PhotoLibraryCollectionViewController.swift in Sources */,
 				B768B9291E03C62F0077662C /* AppDelegate.swift in Sources */,
 			);

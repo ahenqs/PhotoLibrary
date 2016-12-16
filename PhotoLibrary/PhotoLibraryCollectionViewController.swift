@@ -32,6 +32,14 @@ class PhotoLibraryCollectionViewController: UICollectionViewController, UICollec
 
     // MARK: UICollectionViewDataSource
 
+    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -53,6 +61,22 @@ class PhotoLibraryCollectionViewController: UICollectionViewController, UICollec
 
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let photoViewerController = PhotoViewerCollectionViewController(collectionViewLayout: layout)
+        photoViewerController.photos = photos
+        
+        if let controller = UIApplication.shared.keyWindow?.rootViewController {
+            
+            controller.addChildViewController(photoViewerController)
+            photoViewerController.collectionView?.frame = controller.view.bounds
+            controller.view.addSubview(photoViewerController.collectionView!)
+            photoViewerController.willMove(toParentViewController: controller)
+        }
+    }
     
     // MARK: UICollectionViewDelegateFlowLayout
     

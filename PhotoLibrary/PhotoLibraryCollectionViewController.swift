@@ -68,6 +68,7 @@ class PhotoLibraryCollectionViewController: UICollectionViewController, UICollec
         
         let photoViewerController = PhotoViewerCollectionViewController(collectionViewLayout: layout)
         photoViewerController.photos = photos
+        photoViewerController.collectionView?.alpha = 0.0
         
         if let controller = UIApplication.shared.keyWindow?.rootViewController {
             
@@ -75,6 +76,14 @@ class PhotoLibraryCollectionViewController: UICollectionViewController, UICollec
             photoViewerController.collectionView?.frame = controller.view.bounds
             controller.view.addSubview(photoViewerController.collectionView!)
             photoViewerController.willMove(toParentViewController: controller)
+            
+            UIView.animate(withDuration: 0.4, animations: { 
+
+                photoViewerController.collectionView?.frame = controller.view.bounds
+                
+                photoViewerController.collectionView?.alpha = 1.0
+                
+            }, completion: nil)
         }
     }
     

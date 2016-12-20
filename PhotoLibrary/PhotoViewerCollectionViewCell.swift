@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewerCollectionViewCell: UICollectionViewCell {
+class PhotoViewerCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate {
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -27,6 +27,8 @@ class PhotoViewerCollectionViewCell: UICollectionViewCell {
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(closeViewer(gestureRecognizer:)))
         swipeUp.direction = .up
         addGestureRecognizer(swipeUp)
+        
+        photoImageView.isUserInteractionEnabled = true
     }
     
     func closeViewer(gestureRecognizer: UISwipeGestureRecognizer) {
@@ -60,6 +62,11 @@ class PhotoViewerCollectionViewCell: UICollectionViewCell {
             }
             
         }
-        
+    }
+    
+    // MARK: ScrollViewDelegate
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return photoImageView
     }
 }

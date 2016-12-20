@@ -18,19 +18,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-n1-Nfk">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="BUR-Z6-Lzo">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                    </imageView>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2od-RP-kRs">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2od-RP-kRs" firstAttribute="centerY" secondItem="BUR-Z6-Lzo" secondAttribute="centerY" id="Ios-Lv-8Vs"/>
+                            <constraint firstAttribute="bottom" secondItem="2od-RP-kRs" secondAttribute="bottom" id="dER-K1-zpn"/>
+                            <constraint firstAttribute="trailing" secondItem="2od-RP-kRs" secondAttribute="trailing" id="n41-eD-Dmu"/>
+                            <constraint firstItem="2od-RP-kRs" firstAttribute="leading" secondItem="BUR-Z6-Lzo" secondAttribute="leading" id="owo-Fa-ahb"/>
+                            <constraint firstItem="2od-RP-kRs" firstAttribute="top" secondItem="BUR-Z6-Lzo" secondAttribute="top" id="pfF-xU-EFI"/>
+                            <constraint firstItem="2od-RP-kRs" firstAttribute="centerX" secondItem="BUR-Z6-Lzo" secondAttribute="centerX" id="w5e-5q-ktb"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="5Fh-ZL-ZjZ"/>
+                        </connections>
+                    </scrollView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="eVd-n1-Nfk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0p1-T0-AZs"/>
-                <constraint firstItem="eVd-n1-Nfk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Zh-9I-ndT"/>
-                <constraint firstAttribute="trailing" secondItem="eVd-n1-Nfk" secondAttribute="trailing" id="KuJ-wa-Icg"/>
-                <constraint firstAttribute="bottom" secondItem="eVd-n1-Nfk" secondAttribute="bottom" id="WRp-oV-QiS"/>
+                <constraint firstAttribute="bottom" secondItem="BUR-Z6-Lzo" secondAttribute="bottom" id="K6X-3S-FXg"/>
+                <constraint firstItem="BUR-Z6-Lzo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MFW-mO-ubP"/>
+                <constraint firstAttribute="trailing" secondItem="BUR-Z6-Lzo" secondAttribute="trailing" id="OhK-9P-PXz"/>
+                <constraint firstItem="BUR-Z6-Lzo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Oxs-wD-nlw"/>
             </constraints>
             <connections>
-                <outlet property="photoImageView" destination="eVd-n1-Nfk" id="lwy-Oa-qKV"/>
+                <outlet property="photoImageView" destination="2od-RP-kRs" id="s45-w2-NTc"/>
             </connections>
         </collectionViewCell>
     </objects>

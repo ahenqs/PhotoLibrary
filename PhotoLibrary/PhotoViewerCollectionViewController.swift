@@ -66,6 +66,10 @@ class PhotoViewerCollectionViewController: UICollectionViewController, UICollect
         
         view.addSubview(closeButton)
         view.bringSubview(toFront: closeButton)
+        
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        
     }
     
     func closePhotoViewer() {
@@ -123,8 +127,8 @@ class PhotoViewerCollectionViewController: UICollectionViewController, UICollect
     // MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+        // -64.0 to avoid warning
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height - 64.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -133,5 +137,9 @@ class PhotoViewerCollectionViewController: UICollectionViewController, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
     }
 }

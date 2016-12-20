@@ -16,29 +16,47 @@ class PhotoViewerCollectionViewCell: UICollectionViewCell {
         
         super.awakeFromNib()
         
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.black
         
         photoImageView.contentMode = .scaleAspectFit
         
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(closeViewer))
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(closeViewer(gestureRecognizer:)))
         swipeDown.direction = .down
         addGestureRecognizer(swipeDown)
         
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(closeViewer))
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(closeViewer(gestureRecognizer:)))
         swipeUp.direction = .up
         addGestureRecognizer(swipeUp)
     }
     
-    func closeViewer() {
+    func closeViewer(gestureRecognizer: UISwipeGestureRecognizer) {
         
         if let controller = UIApplication.shared.keyWindow?.rootViewController {
             
             let total = controller.view.subviews.count
             
             if total > 2 {
-        
-                controller.view.subviews[total - 1].removeFromSuperview()
                 
+                let theView = controller.view.subviews[total - 1]
+                
+                var point = CGPoint(x: 0.0, y: -theView.frame.height)
+                
+                if gestureRecognizer.direction == UISwipeGestureRecognizerDirection.down {
+                    point = CGPoint(x: 0.0, y: theView.frame.height)
+                }
+                
+                UIView.animate(withDuration: 0.4, animations: {
+                    
+                    theView.frame = CGRect(origin: point, size: theView.frame.size)
+                    
+                    theView.alpha = 0.0
+                    
+                }, completion: { success in
+                
+                    theView.removeFromSuperview()
+                    
+                })
+            
             }
             
         }

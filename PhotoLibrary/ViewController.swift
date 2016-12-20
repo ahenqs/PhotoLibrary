@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let photoViewController = PhotoLibraryCollectionViewController(collectionViewLayout: layout)
     
-        if let photo = UIImage(named: "PhotoPlaceholder") {
-            let photos = [photo, photo, photo, photo, photo, photo, photo]
+        if let photo = UIImage(named: "PhotoPlaceholder"), let photo2 = UIImage(named: "Photo") {
+            let photos = [photo, photo2, photo, photo2, photo, photo2, photo]
         
             photoViewController.photos = photos
         }

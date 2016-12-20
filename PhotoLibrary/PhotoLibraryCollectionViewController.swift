@@ -70,15 +70,17 @@ class PhotoLibraryCollectionViewController: UICollectionViewController, UICollec
         photoViewerController.photos = photos
         photoViewerController.collectionView?.alpha = 0.0
         
+        
         if let controller = UIApplication.shared.keyWindow?.rootViewController {
             
             controller.addChildViewController(photoViewerController)
             photoViewerController.collectionView?.frame = controller.view.bounds
-            controller.view.addSubview(photoViewerController.collectionView!)
+            controller.view.addSubview(photoViewerController.view)
             photoViewerController.willMove(toParentViewController: controller)
+            photoViewerController.selectedPhotoIndex = indexPath.row
             
-            UIView.animate(withDuration: 0.4, animations: { 
-
+            UIView.animate(withDuration: 0.2, animations: {
+                
                 photoViewerController.collectionView?.frame = controller.view.bounds
                 
                 photoViewerController.collectionView?.alpha = 1.0
